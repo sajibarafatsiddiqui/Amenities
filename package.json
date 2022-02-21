@@ -1,0 +1,32 @@
+{
+  "name": "amenity",
+  "version": "1.0.0",
+  "description": "\"Mern Ecommerce\"",
+  "main": "server.js",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "g": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.8",
+    "web-vitals": "^2.1.3"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data-import": "node backend/data/seeder.js",
+    "data-delete": "node backend/data/seeder.js -d"
+  },
+  "author": "Sajib Arafat Siddiqui",
+  "license": "ISC"
+}
